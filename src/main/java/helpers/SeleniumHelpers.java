@@ -24,7 +24,8 @@ public class SeleniumHelpers {
         return webElement;
     }
 
-    public static WebElement waitAndFindElement (By locator) {return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public static WebElement waitAndFindElement (By locator) {
+        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
 
