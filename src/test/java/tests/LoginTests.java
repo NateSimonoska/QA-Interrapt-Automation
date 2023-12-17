@@ -38,5 +38,17 @@ public class LoginTests extends BaseTest{
         String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
+    @Test
+    public void verifySuccessfullyLogOut () throws InterruptedException {
+        login.logIN("natesimonoska@gmail.com", "qabrainster123");
+        Thread.sleep(3000);
+        login.clickMenuButton();
+        Thread.sleep(3000);
+        login.clickLogOutButton();
+
+        String expectedUrl = "https://qainterrapt.brainster.xyz/login";
+        String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
 
 }

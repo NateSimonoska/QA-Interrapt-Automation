@@ -14,6 +14,8 @@ public class LoginPage {
     By passwordField = By.id("password");
     By forgotYourPassword = By.xpath("//a[class=\"underline text-sm text-gray-600 hover:text-gray-900\"]");
     By loginButton = By.xpath("//button[@type='submit']");
+    By menuButton = By.id("menu-button");
+    By logOutButton = By.linkText("Logout");
 
     public void enterEmail (String email) {
         SeleniumHelpers.findElement(emailField).sendKeys(email);
@@ -32,4 +34,11 @@ public class LoginPage {
         SeleniumHelpers.findElement(passwordField).sendKeys(password);
         SeleniumHelpers.findElement(loginButton).click();
     }
+    public void clickMenuButton (){
+        SeleniumHelpers.findElement(menuButton).click();
+    }
+    public void clickLogOutButton (){
+        SeleniumHelpers.findElement(logOutButton).click();
+    }
+
 }
