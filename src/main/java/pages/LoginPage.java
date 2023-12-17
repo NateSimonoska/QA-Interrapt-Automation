@@ -1,5 +1,4 @@
 package pages;
-
 import helpers.SeleniumHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,5 +39,4 @@ public class LoginPage {
     public void clickLogOutButton (){
         SeleniumHelpers.findElement(logOutButton).click();
     }
-
 }

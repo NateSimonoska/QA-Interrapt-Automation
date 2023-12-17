@@ -1,18 +1,14 @@
 package tests;
 
-import helpers.SeleniumHelpers;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.UsersPage;
-import static helpers.SeleniumHelpers.driver;
+
 
 public class UsersTests extends BaseTest {
     UsersPage userPage = new UsersPage();
     LoginPage login = new LoginPage();
-    JavascriptExecutor js = (JavascriptExecutor)driver;
-
 
     @Test
     public void verifyCreateUser () throws InterruptedException {
@@ -57,7 +53,6 @@ public class UsersTests extends BaseTest {
         Thread.sleep(3000);
         userPage.clickUsersLink();
         Thread.sleep(3000);
-        //js.executeScript()
         userPage.clickButtonForShowUsers();
         userPage.clickAllUsersButton();
         Thread.sleep(1000);

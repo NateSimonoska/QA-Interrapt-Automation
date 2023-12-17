@@ -1,7 +1,6 @@
 package tests;
 
 import helpers.SeleniumHelpers;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -50,5 +49,4 @@ public class LoginTests extends BaseTest{
         String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl,actualUrl);
     }
-
 }
