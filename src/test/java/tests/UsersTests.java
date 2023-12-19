@@ -55,6 +55,10 @@ public class UsersTests extends BaseTest {
         Thread.sleep(3000);
         userPage.clickButtonForShowUsers();
         userPage.clickAllUsersButton();
-        Thread.sleep(1000);
+        Thread.sleep(5000);
+
+        String expectedText = "Showing 1 to 1089 of 1089 Results";
+        String actualText = userPage.showingResultsFromUsers();
+        Assert.assertEquals(actualText, expectedText);
     }
 }
