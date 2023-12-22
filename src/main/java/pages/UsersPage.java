@@ -24,7 +24,6 @@ public class UsersPage {
     By selectPeriodField = By.id("input_created_at_formatted");
     By selectAllCheckbox = By.xpath("//input[@type='checkbox']");
     By showingResultsText = By.xpath("//div[@class='mr-2 leading-5 text-center text-slate-700 text-md dark:text-slate-300 sm:text-right']");
-
     By successfulCreatedUserMessage = By.id("swal2-title");
     By successfullyEditedUserMessage = By.id("swal2-title");
     By confirmCreateButton = By.xpath("//button[@class='inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 disabled:cursor-not-allowed transition ease-in-out duration-150 my-5']");

@@ -1,17 +1,16 @@
 package tests;
 
 import helpers.SeleniumHelpers;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 
 public class BaseTest {
-    @BeforeClass
+    @BeforeMethod
     public void setUp () {
         SeleniumHelpers.initializationWebDriver();
         SeleniumHelpers.driver.manage().window().maximize();
         SeleniumHelpers.driver.get("https://qainterrapt.brainster.xyz/login");
     }
-    @AfterClass
+    @AfterMethod
     public void quitDriver () {
        SeleniumHelpers.driver.quit();
     }
