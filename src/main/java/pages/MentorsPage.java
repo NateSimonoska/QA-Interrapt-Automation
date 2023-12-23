@@ -77,5 +77,8 @@ public class MentorsPage {
     public void confirmDeleteButton () {
         SeleniumHelpers.findElement(yesDeleteItButton).click();
     }
+    public void clearNameField () {
+        SeleniumHelpers.findElement(nameField).clear();
+    }
 
 }

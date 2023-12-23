@@ -37,10 +37,9 @@ public class MentorsTest extends BaseTest {
         mentors.setSearch("jana1@gmail.com");
         Thread.sleep(3000);
         mentors.clickActionEditButton();
-        mentors.clearEmailField();
+        mentors.clearNameField();
         Thread.sleep(2000);
-        mentors.setEmail("jana21@hotmail.com");
-        //TODO change the edit behavior to change the name instead the email
+        mentors.setName("Nate");
         mentors.clearOccupationField();
         mentors.setOccupation("QA");
         mentors.clickEditButton();

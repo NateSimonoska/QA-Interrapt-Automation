@@ -10,7 +10,7 @@ public class UsersTests extends BaseTest {
     UsersPage userPage = new UsersPage();
     LoginPage login = new LoginPage();
 
-    @Test
+    @Test (priority = 1)
     public void verifyCreateUser () throws InterruptedException {
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
         Thread.sleep(2000);
@@ -29,7 +29,7 @@ public class UsersTests extends BaseTest {
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 
-    @Test
+    @Test (priority = 2)
     public void verifyEditOfExistingUser () throws InterruptedException {
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
         userPage.clickUsersLink();
@@ -47,7 +47,7 @@ public class UsersTests extends BaseTest {
         String actualMessage = userPage.successfullyEditedUserMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
-    @Test
+    @Test (priority = 3)
     public void verifyAllUsersShownOnDisplay () throws InterruptedException {
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
         Thread.sleep(3000);

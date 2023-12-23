@@ -104,5 +104,4 @@ public class WebinarsTest extends BaseTest {
             String actualText = webinarPage.finishedText();
             Assert.assertEquals(actualText, expectedText);
     }
-
 }

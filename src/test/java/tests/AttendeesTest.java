@@ -1,6 +1,5 @@
 package tests;
 
-import helpers.SeleniumHelpers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AttendeesPage;

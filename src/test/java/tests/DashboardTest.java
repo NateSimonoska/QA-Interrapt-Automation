@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
 
-public class DashboardTests extends BaseTest {
+public class DashboardTest extends BaseTest {
     DashboardPage dashboard = new DashboardPage();
     LoginPage login = new LoginPage();
 
     @Test
-    public void verifyAutomationTesting (){
+    public void verifyAutomationTestingLink(){
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
         dashboard.clickAutomationTestingLink();
 

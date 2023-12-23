@@ -5,9 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class LoginTests extends BaseTest{
+public class LoginTest extends BaseTest{
     LoginPage login = new LoginPage();
-    @Test
+    @Test (priority = 1)
     public void verifySuccessfulLogin() {
         login.enterEmail("natesimonoska@gmail.com");
         login.enterPassword("qabrainster123");
@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest{
         String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
-    @Test
+    @Test (priority = 2)
     public void verifyUnsuccessfulLogin() {
         login.enterEmail("nate@@gmail.com");
         login.enterPassword("abv");
@@ -27,7 +27,7 @@ public class LoginTests extends BaseTest{
         String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
-    @Test
+    @Test (priority = 3)
     public void verifyLoginWithoutData () {
         login.enterEmail("");
         login.enterPassword("");
@@ -37,7 +37,7 @@ public class LoginTests extends BaseTest{
         String actualUrl = SeleniumHelpers.driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
-    @Test
+    @Test (priority = 4)
     public void verifySuccessfullyLogOut () throws InterruptedException {
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
         Thread.sleep(3000);
