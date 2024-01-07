@@ -2,26 +2,25 @@ package pages;
 
 import helpers.SeleniumHelpers;
 import org.openqa.selenium.By;
-import org.openqa.selenium.devtools.v85.css.model.SelectorList;
 
 public class MentorsPage {
 
-    By mentorsLink = By.linkText("Mentors");
-    By createButton = By.xpath("//button[@class='inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 disabled:cursor-not-allowed transition ease-in-out duration-150']");
-    By nameField = By.id("name");
-    By surnameField = By.id("surname");
-    By emailField = By.id("email");
-    By bioField = By.id("bio");
-    By occupationField = By.id("occupation");
-    By createMentorsButton = By.cssSelector("[wire\\:click='create()'");
-    By successfullyMessageForCreate = By.id("swal2-title");
-    By successfullyMessageForEdit = By.id("swal2-title");
-    By successfullyMessageForDelete = By.id("swal2-title");
-    By searchField = By.xpath("//input[@style='padding-left: 36px !important;']");
-    By actionEditButton = By.xpath("//a[@href=\"https://qainterrapt.brainster.xyz/mentors/824/edit\"]");
-    By deleteButton = By.cssSelector("[wire\\:click='delete(820)']");
-    By editButton = By.cssSelector("[wire\\:click='edit()'");
-    By yesDeleteItButton = By.xpath("//button[@class='swal2-confirm swal2-styled swal2-default-outline']");
+    private By mentorsLink = By.linkText("Mentors");
+    private By createButton = By.xpath("//button[@class='inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 disabled:cursor-not-allowed transition ease-in-out duration-150']");
+    private By nameField = By.id("name");
+    private By surnameField = By.id("surname");
+    private By emailField = By.id("email");
+    private By bioField = By.id("bio");
+    private By occupationField = By.id("occupation");
+    private By createMentorsButton = By.cssSelector("[wire\\:click='create()'");
+    private By successfullyMessageForCreate = By.id("swal2-title");
+    private By successfullyMessageForEdit = By.id("swal2-title");
+    private By successfullyMessageForDelete = By.id("swal2-title");
+    private By searchField = By.xpath("//input[@style='padding-left: 36px !important;']");
+    private By actionEditButton = By.xpath("//a[@href=\"https://qainterrapt.brainster.xyz/mentors/824/edit\"]");
+    private By deleteButton = By.cssSelector("[wire\\:click='delete(820)']");
+    private By editButton = By.cssSelector("[wire\\:click='edit()'");
+    private By yesDeleteItButton = By.xpath("//button[@class='swal2-confirm swal2-styled swal2-default-outline']");
 
     public void clickMentorsLink () {
         SeleniumHelpers.findElement(mentorsLink).click();
@@ -47,13 +46,13 @@ public class MentorsPage {
     public void clickCreateMentorsButton () {
         SeleniumHelpers.findElement(createMentorsButton).click();
     }
-    public String successfullyCreateMentorMessage () {
+    public String getSuccessfullyCreateMentorMessage() {
         return SeleniumHelpers.findElement(successfullyMessageForCreate).getText();
     }
-    public String successfullyEditMentorMessage () {
+    public String getSuccessfullyEditMentorMessage() {
         return SeleniumHelpers.findElement(successfullyMessageForEdit).getText();
     }
-    public String successfullyDeletedMentorMessage () {
+    public String getSuccessfullyDeletedMentorMessage() {
         return SeleniumHelpers.findElement(successfullyMessageForDelete).getText();
     }
     public void clearEmailField () {
@@ -80,5 +79,4 @@ public class MentorsPage {
     public void clearNameField () {
         SeleniumHelpers.findElement(nameField).clear();
     }
-
 }

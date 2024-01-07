@@ -6,7 +6,6 @@ import pages.LoginPage;
 import pages.MentorsPage;
 
 public class MentorsTest extends BaseTest {
-
     LoginPage login = new LoginPage();
     MentorsPage mentors = new MentorsPage();
 
@@ -18,7 +17,6 @@ public class MentorsTest extends BaseTest {
         mentors.setName("Jana");
         mentors.setSurname("Naumoska");
         mentors.setEmail("jana1@gmail.com");
-        Thread.sleep(2000);
         mentors.setBio("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
         mentors.setOccupation("Software Tester");
         Thread.sleep(2000);
@@ -26,7 +24,7 @@ public class MentorsTest extends BaseTest {
         Thread.sleep(3000);
 
         String expectedMessage = "Mentor has been created successfully";
-        String actualMessage = mentors.successfullyCreateMentorMessage();
+        String actualMessage = mentors.getSuccessfullyCreateMentorMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 
@@ -46,7 +44,7 @@ public class MentorsTest extends BaseTest {
         Thread.sleep(3000);
 
         String expectedMessage = "Mentor has been edited successfully";
-        String actualMessage = mentors.successfullyEditMentorMessage();
+        String actualMessage = mentors.getSuccessfullyEditMentorMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 
@@ -62,7 +60,7 @@ public class MentorsTest extends BaseTest {
         Thread.sleep(3000);
 
         String actualMessage = "Mentor has been deleted successfully";
-        String expectedMessage = mentors.successfullyDeletedMentorMessage();
+        String expectedMessage = mentors.getSuccessfullyDeletedMentorMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 }

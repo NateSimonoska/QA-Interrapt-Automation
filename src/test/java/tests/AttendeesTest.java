@@ -7,7 +7,6 @@ import pages.LoginPage;
 
 
 public class AttendeesTest extends BaseTest {
-
     LoginPage login = new LoginPage();
     AttendeesPage attendeesPage = new AttendeesPage();
 
@@ -23,7 +22,7 @@ public class AttendeesTest extends BaseTest {
         attendeesPage.setCity("Ohrid");
         attendeesPage.setHighSchool("Sv. Kliment Ohridski");
         attendeesPage.setFaculty("Finki");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         attendeesPage.clickOnSelectWebinarButton();
         attendeesPage.setSelectWebinar();
         Thread.sleep(2000);
@@ -50,7 +49,7 @@ public class AttendeesTest extends BaseTest {
         Thread.sleep(3000);
 
         String expectedMessage = "Attendee has been edited successfully";
-        String actualMessage = attendeesPage.successfullyEditMessage();
+        String actualMessage = attendeesPage.getSuccessfullyEditMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 
@@ -66,7 +65,7 @@ public class AttendeesTest extends BaseTest {
         Thread.sleep(3000);
 
         String expectedMessage = "Attendee has been deleted successfully";
-        String actualMessage = attendeesPage.successfullyDeletedAttendee();
+        String actualMessage = attendeesPage.getSuccessfullyDeletedAttendee();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 }

@@ -9,25 +9,22 @@ import java.sql.Driver;
 
 public class LoginPage {
 
-    By emailField = By.id("email");
-    By passwordField = By.id("password");
-    By forgotYourPassword = By.xpath("//a[class=\"underline text-sm text-gray-600 hover:text-gray-900\"]");
-    By loginButton = By.xpath("//button[@type='submit']");
-    By menuButton = By.id("menu-button");
-    By logOutButton = By.linkText("Logout");
+    private By emailField = By.id("email");
+    private By passwordField = By.id("password");
+    private By forgotYourPassword = By.xpath("//a[class=\"underline text-sm text-gray-600 hover:text-gray-900\"]");
+    private By loginButton = By.xpath("//button[@type='submit']");
+    private By menuButton = By.id("menu-button");
+    private By logOutButton = By.linkText("Logout");
 
     public void enterEmail (String email) {
         SeleniumHelpers.findElement(emailField).sendKeys(email);
     }
     public void enterPassword (String setPassword) {
-       WebElement password = SeleniumHelpers.findElement(passwordField);
-       password.sendKeys(setPassword);
+        SeleniumHelpers.findElement(passwordField).sendKeys(setPassword);
     }
     public void clickLoginButton () {
-        WebElement loginWebButton = SeleniumHelpers.findElement(loginButton);
-        loginWebButton.click();
+        SeleniumHelpers.findElement(loginButton).click();
     }
-
     public void logIN (String email, String password) {
         SeleniumHelpers.findElement(emailField).sendKeys(email);
         SeleniumHelpers.findElement(passwordField).sendKeys(password);

@@ -12,14 +12,13 @@ public class SeleniumHelpers {
     private static WebDriverWait webDriverWait;
 
 
-    public static void initializationWebDriver() {
+    public static void initializeWebDriver() {
         driver = new ChromeDriver();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public static WebElement findElement(By element) {
-        WebElement webElement = driver.findElement(element);
-        return webElement;
+    public static WebElement findElement(By locatorElement) {
+        return driver.findElement(locatorElement);
     }
 
     public static WebElement waitAndFindElement (By locator) {

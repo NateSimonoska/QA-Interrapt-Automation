@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest{
     @Test (priority = 4)
     public void verifySuccessfullyLogOut () throws InterruptedException {
         login.logIN("natesimonoska@gmail.com", "qabrainster123");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         login.clickMenuButton();
         Thread.sleep(3000);
         login.clickLogOutButton();

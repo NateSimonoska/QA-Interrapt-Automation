@@ -7,8 +7,8 @@ import pages.DashboardPage;
 import pages.LoginPage;
 
 public class DashboardTest extends BaseTest {
-    DashboardPage dashboard = new DashboardPage();
     LoginPage login = new LoginPage();
+    DashboardPage dashboard = new DashboardPage();
 
     @Test
     public void verifyAutomationTestingLink(){

@@ -20,7 +20,7 @@ public class TagsTest extends BaseTest{
         Thread.sleep(3000);
 
         String expectedMessage = "Tag has been created successfully";
-        String actualMessage = tags.successfullyCreateTagMessage();
+        String actualMessage = tags.getSuccessfullyCreateTagMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
     @Test (priority = 2)
@@ -37,7 +37,7 @@ public class TagsTest extends BaseTest{
         Thread.sleep(3000);
 
         String expectedMessage = "Tag has been edited successfully";
-        String actualMessage = tags.successfullyEditTagMessage();
+        String actualMessage = tags.getSuccessfullyEditTagMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
     @Test (priority = 3)
@@ -52,7 +52,7 @@ public class TagsTest extends BaseTest{
         Thread.sleep(3000);
 
         String expectedMessage = "Tag has been deleted successfully";
-        String actualMessage = tags.successfullyDeleteTagMessage();
+        String actualMessage = tags.getSuccessfullyDeleteTagMessage();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
 }
